@@ -1,0 +1,32 @@
+/* =========================================================
+   TEAM PAGE
+========================================================= */
+
+.team-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #FFFFFF;
+}
+
+.team-page__main {
+    width: 100%;
+}
+
+.team-page__status {
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #004A8F;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.team-page__status--error {
+    color: #A23A3A;
+}

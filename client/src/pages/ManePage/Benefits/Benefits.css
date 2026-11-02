@@ -1,0 +1,936 @@
+/* =========================================================
+   BENEFITS / ПРЕИМУЩЕСТВА СИСТЕМЫ
+========================================================= */
+
+.benefits-section {
+    --benefit-blue: #0055A4;
+    --benefit-dark-blue: #004A8F;
+    --benefit-light-blue: #EAF3FB;
+
+    --benefit-border: #D6E0E8;
+    --benefit-border-dark: #C4D4DF;
+
+    --benefit-text: #17324D;
+    --benefit-muted: #66798A;
+
+    width: 100%;
+
+    padding: 84px 0 92px;
+
+    background: #F7F9FB;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.benefits-container {
+    width: min(1200px, calc(100% - 56px));
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.benefits-header {
+    max-width: 850px;
+
+    margin: 0 0 46px;
+}
+
+
+.benefits-header-line {
+    width: 56px;
+    height: 4px;
+
+    margin-bottom: 17px;
+
+    background: var(--benefit-blue);
+
+    border-radius: 2px;
+}
+
+
+.benefits-label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--benefit-blue);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+.benefits-main-title {
+    margin: 0;
+
+    color: var(--benefit-dark-blue);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(34px, 3.6vw, 46px);
+    font-weight: 700;
+
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+
+    text-transform: uppercase;
+}
+
+
+.benefits-intro {
+    max-width: 760px;
+
+    margin: 14px 0 0;
+
+    color: var(--benefit-muted);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.benefits-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.94fr)
+        minmax(0, 1.06fr);
+
+    gap: 30px;
+
+    align-items: stretch;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT COLUMN
+========================================================= */
+
+.benefits-left-column {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BASE CARD
+========================================================= */
+
+.benefits-card {
+    position: relative;
+
+    width: 100%;
+
+    padding: 27px 28px;
+
+    background: #FFFFFF;
+
+    border: 1px solid var(--benefit-border);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 16px rgba(0, 74, 143, 0.045);
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.benefits-card:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--benefit-border-dark);
+
+    box-shadow:
+        0 9px 22px rgba(0, 74, 143, 0.075);
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.card-heading {
+    margin-bottom: 22px;
+}
+
+
+.card-kicker {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--benefit-muted);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+.card-title {
+    margin: 0;
+
+    color: var(--benefit-dark-blue);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.card-body-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.info-row {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    min-width: 0;
+
+    padding-top: 13px;
+
+    border-top: 1px solid #E8EEF3;
+}
+
+
+.info-row:first-child {
+    padding-top: 0;
+
+    border-top: none;
+}
+
+
+.icon-container {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--benefit-light-blue);
+
+    border: 1px solid #D6E5F0;
+
+    border-radius: 9px;
+
+    box-sizing: border-box;
+}
+
+
+.benefit-icon {
+    max-width: 63%;
+    max-height: 63%;
+
+    object-fit: contain;
+}
+
+
+.info-text {
+    margin: 0;
+    padding-top: 2px;
+
+    color: var(--benefit-text);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   RIGHT CARD
+========================================================= */
+
+.advantages-card {
+    min-width: 0;
+
+    height: 100%;
+
+    padding: 28px 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF 0%,
+            #F9FBFD 100%
+        );
+
+    border: 1px solid var(--benefit-border);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 16px rgba(0, 74, 143, 0.045);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ADVANTAGES HEADING
+========================================================= */
+
+.advantages-heading {
+    max-width: 620px;
+
+    margin-bottom: 28px;
+}
+
+
+.advantages-main-title {
+    margin: 0;
+
+    color: var(--benefit-dark-blue);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+}
+
+
+.advantages-intro {
+    max-width: 580px;
+
+    margin: 10px 0 0;
+
+    color: var(--benefit-muted);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   ADVANTAGES LIST
+========================================================= */
+
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.advantage-item {
+    padding: 0 0 21px;
+    margin: 0 0 21px;
+
+    border-bottom: 1px solid var(--benefit-border);
+}
+
+
+.advantage-item:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   ADVANTAGE HEADER
+========================================================= */
+
+.advantage-header {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 9px;
+}
+
+
+.advantage-icon-block {
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--benefit-light-blue);
+
+    border: 1px solid #D6E5F0;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+
+.adv-icon {
+    max-width: 64%;
+    max-height: 64%;
+
+    object-fit: contain;
+}
+
+
+.advantage-text-block {
+    min-width: 0;
+}
+
+
+.advantage-title {
+    margin: 0;
+
+    color: var(--benefit-dark-blue);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.advantage-description {
+    margin: 0;
+
+    color: #334E68;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.58;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.benefits-actions {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 12px;
+
+    margin-top: 1px;
+}
+
+
+.btn-action {
+    width: 100%;
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 18px;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.btn-order {
+    background: var(--benefit-blue);
+
+    color: #FFFFFF;
+
+    border: 1px solid var(--benefit-blue);
+
+    box-shadow:
+        0 5px 14px rgba(0, 85, 164, 0.12);
+}
+
+
+.btn-order:hover {
+    background: var(--benefit-dark-blue);
+
+    border-color: var(--benefit-dark-blue);
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 85, 164, 0.17);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.btn-consult {
+    background: #FFFFFF;
+
+    color: var(--benefit-blue);
+
+    border: 1px solid var(--benefit-border);
+
+    box-shadow:
+        0 4px 12px rgba(0, 74, 143, 0.04);
+}
+
+
+.btn-consult:hover {
+    background: var(--benefit-light-blue);
+
+    border-color: #B7CEE1;
+
+    color: var(--benefit-dark-blue);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.btn-action:focus-visible {
+    outline: 2px solid #2AB6FC;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   1024
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .benefits-section {
+        padding: 68px 0 78px;
+    }
+
+
+    .benefits-container {
+        width: min(100%, calc(100% - 40px));
+    }
+
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+
+    .advantages-card {
+        height: auto;
+
+        order: 1;
+    }
+
+
+    .benefits-left-column {
+        order: 2;
+    }
+
+
+    .benefits-header {
+        margin-bottom: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   800
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .benefits-container {
+        width: min(100%, calc(100% - 32px));
+    }
+
+
+    .benefits-card,
+    .advantages-card {
+        padding: 25px 24px;
+    }
+
+
+    .benefits-main-title {
+        font-size: 34px;
+    }
+
+
+    .advantages-main-title {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================================
+   767
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .benefits-section {
+        padding: 55px 0 64px;
+    }
+
+
+    .benefits-container {
+        width: min(100%, calc(100% - 32px));
+    }
+
+
+    .benefits-header {
+        margin-bottom: 30px;
+    }
+
+
+    .benefits-header-line {
+        width: 46px;
+        height: 3px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .benefits-label {
+        font-size: 10px;
+    }
+
+
+    .benefits-main-title {
+        font-size: 28px;
+    }
+
+
+    .benefits-intro {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+
+    .benefits-grid {
+        gap: 18px;
+    }
+
+
+    .benefits-card,
+    .advantages-card {
+        padding: 23px 20px;
+
+        border-radius: 13px;
+    }
+
+
+    .card-heading {
+        margin-bottom: 20px;
+    }
+
+
+    .card-kicker {
+        font-size: 10px;
+    }
+
+
+    .card-title {
+        font-size: 21px;
+    }
+
+
+    .info-row {
+        gap: 11px;
+    }
+
+
+    .icon-container {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+
+        border-radius: 8px;
+    }
+
+
+    .info-text {
+        font-size: 13.5px;
+        line-height: 1.5;
+    }
+
+
+    .advantages-heading {
+        margin-bottom: 23px;
+    }
+
+
+    .advantages-main-title {
+        font-size: 24px;
+    }
+
+
+    .advantages-intro {
+        font-size: 13.5px;
+    }
+
+
+    .advantage-item {
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+    }
+
+
+    .advantage-header {
+        gap: 11px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .advantage-icon-block {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+
+        border-radius: 9px;
+    }
+
+
+    .advantage-title {
+        font-size: 17px;
+    }
+
+
+    .advantage-description {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    .benefits-actions {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+
+    .btn-action {
+        min-height: 48px;
+    }
+
+}
+
+
+/* =========================================================
+   576
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .benefits-section {
+        padding: 46px 0 54px;
+    }
+
+
+    .benefits-container {
+        width: min(100%, calc(100% - 24px));
+    }
+
+
+    .benefits-main-title {
+        font-size: 24px;
+    }
+
+
+    .benefits-intro {
+        font-size: 13px;
+    }
+
+
+    .benefits-card,
+    .advantages-card {
+        padding: 21px 17px;
+    }
+
+
+    .card-title {
+        font-size: 19px;
+    }
+
+
+    .info-text {
+        font-size: 13px;
+    }
+
+
+    .advantages-main-title {
+        font-size: 21px;
+    }
+
+
+    .advantage-title {
+        font-size: 16px;
+    }
+
+
+    .advantage-description {
+        font-size: 12.5px;
+    }
+
+
+    .btn-action {
+        min-height: 46px;
+
+        font-size: 13.5px;
+    }
+
+}
+
+
+/* =========================================================
+   360
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .benefits-container {
+        width: min(100%, calc(100% - 20px));
+    }
+
+
+    .benefits-main-title {
+        font-size: 22px;
+    }
+
+
+    .card-title {
+        font-size: 18px;
+    }
+
+
+    .info-text {
+        font-size: 12.5px;
+    }
+
+
+    .advantages-main-title {
+        font-size: 20px;
+    }
+
+
+    .advantage-title {
+        font-size: 15.5px;
+    }
+
+
+    .advantage-description {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .benefits-card,
+    .btn-action {
+        transition: none;
+    }
+
+}

@@ -1,0 +1,1082 @@
+/* =========================================================
+   CATALOG PAGE
+========================================================= */
+
+.catalog-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #E9E9E9;
+}
+
+.catalog-main {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 130px 28px 70px;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.catalog-status {
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #004A8F;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.catalog-status--error {
+    color: #9B3030;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.catalog-modal {
+    position: fixed;
+    inset: 0;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    box-sizing: border-box;
+}
+
+.catalog-modal__overlay {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+
+    border: none;
+
+    background: rgba(9, 28, 45, 0.68);
+
+    backdrop-filter: blur(4px);
+
+    cursor: pointer;
+}
+
+.catalog-modal__content {
+    position: relative;
+
+    width: min(900px, 94vw);
+    max-height: 90vh;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D6E7F5;
+    border-radius: 20px;
+
+    overflow-y: auto;
+
+    z-index: 2;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.24);
+
+    box-sizing: border-box;
+}
+
+.catalog-modal__close {
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 74, 143, 0.15);
+    border-radius: 12px;
+
+    background: #FFFFFF;
+
+    color: #0055A4;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 3;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.catalog-modal__close:hover {
+    background: #EAF3FB;
+
+    border-color: #0055A4;
+
+    transform: rotate(90deg);
+}
+
+.catalog-modal__image {
+    width: 100%;
+    max-height: 400px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.catalog-modal__body {
+    padding: 30px 34px 34px;
+}
+
+.catalog-modal__heading {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.catalog-modal__heading h2 {
+    margin: 0;
+
+    color: #004A8F;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.catalog-modal__heading span {
+    width: 4px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    background: #0055A4;
+
+    border-radius: 999px;
+}
+
+.catalog-modal__company {
+    margin: 10px 0 28px;
+
+    color: #6A88A3;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.catalog-modal__cards {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.catalog-modal__card {
+    padding: 20px 22px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D6E7F5;
+    border-left: 4px solid #0055A4;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 74, 143, 0.05);
+}
+
+.catalog-modal__card h3 {
+    margin: 0 0 10px;
+
+    color: #004A8F;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.catalog-modal__card p {
+    margin: 0;
+
+    color: #334E68;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.catalog-modal__short-info {
+    margin-top: 22px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.catalog-modal__short-item {
+    padding: 15px;
+
+    background: #EAF3FB;
+
+    border-radius: 12px;
+}
+
+.catalog-modal__short-item span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #6A88A3;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.catalog-modal__short-item strong {
+    display: block;
+
+    color: #17324D;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .catalog-main {
+        padding: 120px 24px 60px;
+    }
+
+    .catalog-modal__short-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .catalog-main {
+        padding: 105px 16px 50px;
+    }
+
+    .catalog-modal {
+        padding: 12px;
+    }
+
+    .catalog-modal__content {
+        max-height: 94vh;
+        border-radius: 16px;
+    }
+
+    .catalog-modal__body {
+        padding: 22px 18px 24px;
+    }
+
+    .catalog-modal__heading {
+        align-items: flex-start;
+    }
+
+    .catalog-modal__heading h2 {
+        font-size: 25px;
+    }
+
+    .catalog-modal__heading span {
+        height: 30px;
+    }
+
+    .catalog-modal__company {
+        font-size: 13px;
+    }
+
+    .catalog-modal__card {
+        padding: 17px 16px;
+    }
+
+    .catalog-modal__card h3 {
+        font-size: 16px;
+    }
+
+    .catalog-modal__card p {
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .catalog-main {
+        padding: 98px 12px 45px;
+    }
+
+    .catalog-modal__image {
+        max-height: 250px;
+    }
+
+    .catalog-modal__close {
+        width: 38px;
+        height: 38px;
+
+        top: 9px;
+        right: 9px;
+
+        font-size: 24px;
+        border-radius: 10px;
+    }
+}
+
+/* =========================================================
+   ADMIN BAR
+========================================================= */
+
+.catalog-admin-bar {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 28px;
+    padding: 15px 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F3F8FC 0%,
+            #EAF3FB 100%
+        );
+
+    border: 1px solid #C9DCEB;
+    border-left: 4px solid #0055A4;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+
+.catalog-admin-bar__label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #0055A4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+
+.catalog-admin-bar__text {
+    display: block;
+
+    color: #5F7485;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+
+.catalog-admin-bar__add {
+    min-height: 42px;
+
+    padding: 0 16px;
+
+    border: 1px solid #0055A4;
+    border-radius: 8px;
+
+    background: #0055A4;
+
+    color: #FFFFFF;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.catalog-admin-bar__add:hover {
+    background: #004A8F;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ADMIN ERROR
+========================================================= */
+
+.catalog-admin-error {
+    margin-bottom: 20px;
+
+    padding: 13px 16px;
+
+    background: #FFF4F4;
+
+    border: 1px solid #E6CACA;
+    border-left: 4px solid #9B3030;
+
+    border-radius: 8px;
+
+    color: #8D3030;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   EDITOR MODAL
+========================================================= */
+
+.catalog-editor {
+    position: fixed;
+
+    inset: 0;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10000;
+
+    box-sizing: border-box;
+}
+
+
+.catalog-editor__overlay {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    background: rgba(9, 28, 45, 0.68);
+
+    backdrop-filter: blur(4px);
+
+    cursor: pointer;
+}
+
+
+.catalog-editor__content {
+    position: relative;
+
+    width: min(560px, 94vw);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D6E7F5;
+
+    border-radius: 16px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.24);
+
+    box-sizing: border-box;
+}
+
+
+.catalog-editor__close {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #D6E7F5;
+    border-radius: 9px;
+
+    background: #FFFFFF;
+
+    color: #0055A4;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+.catalog-editor__header {
+    margin-bottom: 24px;
+}
+
+
+.catalog-editor__header span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #0055A4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+.catalog-editor__header h2 {
+    margin: 0;
+
+    color: #004A8F;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   FORM ERROR
+========================================================= */
+
+.catalog-editor__error {
+    margin-bottom: 15px;
+
+    padding: 11px 13px;
+
+    background: #FFF4F4;
+
+    border: 1px solid #E5CCCC;
+
+    border-radius: 7px;
+
+    color: #963A3A;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.catalog-editor__validation {
+    margin-bottom: 15px;
+
+    padding: 11px 13px;
+
+    background: #FFF8E8;
+
+    border: 1px solid #EBD7A1;
+
+    border-radius: 7px;
+
+    color: #765E20;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.catalog-editor__form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+
+.catalog-editor__form label {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.catalog-editor__form label span {
+    color: #17324D;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.catalog-editor__form input {
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 0 13px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #CFDCE6;
+
+    border-radius: 8px;
+
+    color: #17324D;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.catalog-editor__form input:focus {
+    border-color: #0055A4;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 85, 164, 0.10);
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.catalog-editor__actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 8px;
+}
+
+
+.catalog-editor__actions button {
+    min-height: 46px;
+
+    border-radius: 8px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+.catalog-editor__cancel {
+    background: #FFFFFF;
+
+    border: 1px solid #D6E0E8;
+
+    color: #557084;
+}
+
+
+.catalog-editor__save {
+    background: #0055A4;
+
+    border: 1px solid #0055A4;
+
+    color: #FFFFFF;
+}
+
+
+.catalog-editor__save:hover {
+    background: #004A8F;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .catalog-admin-bar {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        gap: 13px;
+    }
+
+
+    .catalog-admin-bar__add {
+        width: 100%;
+    }
+
+
+    .catalog-editor {
+        padding: 12px;
+    }
+
+
+    .catalog-editor__content {
+        padding: 24px 18px;
+    }
+
+
+    .catalog-editor__header h2 {
+        font-size: 23px;
+    }
+
+
+    .catalog-editor__actions {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================================
+   EDITOR SECTIONS
+========================================================= */
+
+.catalog-editor__section {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+
+    padding: 18px;
+
+    background: #F8FBFD;
+
+    border: 1px solid #DCE8F1;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+}
+
+
+.catalog-editor__section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    margin-bottom: 2px;
+}
+
+
+.catalog-editor__section-header > div {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.catalog-editor__section-number {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #EAF3FB;
+
+    border: 1px solid #C9DCEB;
+    border-radius: 7px;
+
+    color: #0055A4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+.catalog-editor__section-header h3 {
+    margin: 0;
+
+    color: #17324D;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+
+.catalog-editor__add-button {
+    min-height: 34px;
+
+    padding: 0 11px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #C9DCEB;
+    border-radius: 7px;
+
+    color: #0055A4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.catalog-editor__add-button:hover {
+    background: #EAF3FB;
+
+    border-color: #0055A4;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EDITOR ITEMS
+========================================================= */
+
+.catalog-editor__items {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.catalog-editor__item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding: 15px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D6E7F5;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+
+.catalog-editor__item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #E8F0F6;
+}
+
+
+.catalog-editor__item-header strong {
+    color: #004A8F;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+.catalog-editor__remove-button {
+    min-height: 30px;
+
+    padding: 0 9px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E3CACA;
+    border-radius: 6px;
+
+    color: #9B3030;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.catalog-editor__remove-button:hover {
+    background: #FFF3F3;
+
+    border-color: #B65A5A;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.catalog-editor__form textarea {
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 11px 13px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #CFDCE6;
+
+    border-radius: 8px;
+
+    color: #17324D;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    resize: vertical;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.catalog-editor__form textarea:focus {
+    border-color: #0055A4;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 85, 164, 0.10);
+}
+
+
+/* =========================================================
+   MOBILE EDITOR
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .catalog-editor__section {
+        padding: 14px;
+    }
+
+
+    .catalog-editor__section-header {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .catalog-editor__add-button {
+        width: 100%;
+    }
+
+
+    .catalog-editor__item {
+        padding: 13px;
+    }
+
+
+    .catalog-editor__item-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .catalog-editor__remove-button {
+        width: 100%;
+    }
+
+}

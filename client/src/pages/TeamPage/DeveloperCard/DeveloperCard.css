@@ -1,0 +1,298 @@
+/* =========================================================
+   BASE CARD
+========================================================= */
+
+.developer-card {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 22px 18px 20px;
+
+    background: #004A8F;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 74, 143, 0.12);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.developer-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 74, 143, 0.18);
+}
+
+/* =========================================================
+   LEADER / MEMBER
+========================================================= */
+
+.developer-card--leader {
+    min-height: 470px;
+}
+
+.developer-card--member {
+    min-height: 425px;
+}
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.developer-tag {
+    min-height: 38px;
+
+    width: 90%;
+
+    margin-bottom: 20px;
+
+    padding: 8px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 999px;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+/* Existing db.json tag classes */
+
+.tag-purple {
+    background: #D1C4E9;
+    color: #504762;
+}
+
+.tag-yellow-lead,
+.tag-yellow {
+    background: #FEEF9E;
+    color: #504762;
+}
+
+.tag-teal-lead,
+.tag-teal {
+    background: #B2DFDB;
+    color: #504762;
+}
+
+.tag-gray {
+    background: #CFD8DC;
+    color: #4F6974;
+}
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.developer-avatar {
+    width: 124px;
+    height: 124px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background: #84C276;
+
+    border: 4px solid rgba(255, 255, 255, 0.12);
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.developer-name {
+    margin-bottom: 14px;
+
+    text-align: center;
+}
+
+.developer-last-name {
+    color: #FFFFFF;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    text-transform: uppercase;
+}
+
+.developer-first-name {
+    margin-top: 4px;
+
+    color: #FFFFFF;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    line-height: 1.3;
+}
+
+/* Member */
+
+.developer-card--member .developer-last-name {
+    font-size: 22px;
+}
+
+.developer-card--member .developer-first-name {
+    font-size: 16px;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.developer-description {
+    flex: 1;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+
+    color: #FEEF9E;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+    line-height: 1.45;
+
+    text-align: center;
+}
+
+.developer-card--member .developer-description {
+    font-size: 13px;
+}
+
+/* =========================================================
+   EXPERTISE
+========================================================= */
+
+.developer-expertise {
+    min-height: 40px;
+
+    margin-bottom: 18px;
+
+    color: #FFFFFF;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    text-align: center;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.developer-button {
+    min-height: 44px;
+
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D6E7F5;
+    border-radius: 10px;
+
+    color: #004A8F;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.developer-button:hover {
+    background: #EAF3FB;
+
+    border-color: #FFFFFF;
+
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .developer-card {
+        border-radius: 16px;
+
+        padding: 20px 16px 18px;
+    }
+
+    .developer-card--leader,
+    .developer-card--member {
+        min-height: 0;
+    }
+
+    .developer-avatar {
+        width: 112px;
+        height: 112px;
+    }
+
+    .developer-last-name {
+        font-size: 24px;
+    }
+
+    .developer-first-name {
+        font-size: 16px;
+    }
+
+    .developer-card--member .developer-last-name {
+        font-size: 21px;
+    }
+
+    .developer-description {
+        font-size: 13px;
+    }
+
+    .developer-button {
+        min-height: 42px;
+    }
+}

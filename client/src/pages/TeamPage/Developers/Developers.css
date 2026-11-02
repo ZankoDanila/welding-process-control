@@ -1,0 +1,286 @@
+/* =========================================================
+   DEVELOPERS
+========================================================= */
+
+.developers-section {
+    width: 100%;
+
+    padding: 72px 28px 82px;
+
+    background: #E9E9E9;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.developers-header {
+    width: 100%;
+    max-width: 1144px;
+
+    margin: 0 auto 42px;
+
+    padding: 20px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 20px;
+
+    background: #0055A4;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 74, 143, 0.10);
+
+    box-sizing: border-box;
+}
+
+.developers-title {
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    text-align: right;
+}
+
+.developers-header-icon {
+    width: 60px;
+    height: 60px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+}
+
+.developers-header-icon span {
+    width: 26px;
+    height: 2px;
+
+    background: #FFFFFF;
+
+    border-radius: 999px;
+}
+
+/* =========================================================
+   LEADERS
+========================================================= */
+
+.leaders-grid {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 34px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+/* =========================================================
+   MEMBERS CAROUSEL
+========================================================= */
+
+.members-carousel {
+    width: 100%;
+    max-width: 1260px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr) 46px;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.members-grid {
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.carousel-arrow {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D6E7F5;
+    border-radius: 14px;
+
+    color: #0055A4;
+
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0, 74, 143, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+    background: #EAF3FB;
+
+    border-color: #0055A4;
+
+    transform: translateY(-2px);
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .developers-section {
+        padding: 60px 24px 70px;
+    }
+
+    .developers-header {
+        margin-bottom: 34px;
+    }
+
+    .developers-title {
+        font-size: 32px;
+    }
+
+    .leaders-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        max-width: 800px;
+    }
+
+    .members-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .developers-section {
+        padding: 45px 16px 55px;
+    }
+
+    .developers-header {
+        margin-bottom: 26px;
+
+        padding: 16px 18px;
+
+        justify-content: center;
+
+        border-radius: 14px;
+    }
+
+    .developers-title {
+        font-size: 25px;
+
+        text-align: center;
+    }
+
+    .developers-header-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .leaders-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 430px;
+    }
+
+    .members-carousel {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 320px;
+
+        margin: 0 auto;
+    }
+
+    .carousel-arrow {
+        display: none;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .developers-section {
+        padding: 38px 12px 48px;
+    }
+
+    .developers-header {
+        padding: 14px;
+
+        border-radius: 12px;
+    }
+
+    .developers-title {
+        font-size: 21px;
+    }
+}

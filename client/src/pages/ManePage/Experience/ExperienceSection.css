@@ -1,0 +1,766 @@
+/* =========================================================
+   ОПЫТ / EXPERIENCE
+========================================================= */
+
+.experience-section {
+    --exp-blue: #0055A4;
+    --exp-dark-blue: #004A8F;
+    --exp-light-blue: #EAF3FB;
+    --exp-border: #D6E7F5;
+    --exp-text: #17324D;
+    --exp-muted: #6A88A3;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 70px 28px 80px;
+
+    box-sizing: border-box;
+
+    font-family: 'Inter', sans-serif;
+    color: var(--exp-text);
+}
+
+/* =========================================================
+   ЗАГОЛОВОК
+========================================================= */
+
+.exp-header {
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+    max-width: 100%;
+
+    margin-bottom: 42px;
+
+    overflow: hidden;
+
+    background: #FFFFFF;
+
+    border: 1px solid var(--exp-border);
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 74, 143, 0.08);
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   ОСНОВНОЙ ЗАГОЛОВОК
+========================================================= */
+
+.exp-main-title {
+    height: 64px;
+
+    margin: 0;
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--exp-blue);
+
+    color: #FFFFFF;
+
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   ПОДЗАГОЛОВОК
+========================================================= */
+
+.exp-subtitle-badge {
+    height: 64px;
+
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+
+    background: #FFFFFF;
+
+    color: var(--exp-blue);
+
+    border-left: 1px solid var(--exp-border);
+
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   ОСНОВНОЙ КОНТЕНТ
+========================================================= */
+
+.exp-content-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 270px;
+
+    gap: 38px;
+
+    align-items: start;
+}
+
+/* =========================================================
+   СЛАЙДЕР
+========================================================= */
+
+.exp-slider-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    min-width: 0;
+}
+
+/* =========================================================
+   КАРТОЧКИ ДАТЧИКОВ
+   Если эти стили уже есть в другом файле —
+   можно объединить их туда.
+========================================================= */
+
+.exp-sensor-card {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    background: #FFFFFF;
+
+    border: 1px solid var(--exp-border);
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0, 74, 143, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.exp-sensor-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #BFD8EC;
+
+    box-shadow:
+        0 14px 30px rgba(0, 74, 143, 0.13);
+}
+
+/* Верхний технический акцент карточки */
+
+.exp-sensor-card::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background: var(--exp-blue);
+}
+
+/* =========================================================
+   БОКОВАЯ ПАНЕЛЬ
+========================================================= */
+
+.exp-actions-sidebar {
+    display: flex;
+    flex-direction: column;
+
+    gap: 26px;
+
+    min-width: 0;
+}
+
+/* =========================================================
+   ГРУППА КНОПОК
+========================================================= */
+
+.exp-buttons-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+/* =========================================================
+   КНОПКИ
+========================================================= */
+
+.exp-btn {
+    position: relative;
+
+    width: 100%;
+    min-height: 56px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.exp-btn:hover {
+    transform: translateY(-2px);
+}
+
+.exp-btn:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   ОСНОВНАЯ КНОПКА
+========================================================= */
+
+.exp-btn-primary {
+    background: var(--exp-blue);
+
+    border: 1px solid var(--exp-blue);
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 6px 18px rgba(0, 85, 164, 0.15);
+}
+
+.exp-btn-primary:hover {
+    background: var(--exp-dark-blue);
+    border-color: var(--exp-dark-blue);
+
+    box-shadow:
+        0 10px 24px rgba(0, 85, 164, 0.22);
+}
+
+/* =========================================================
+   ВТОРИЧНАЯ КНОПКА
+========================================================= */
+
+.exp-btn-secondary {
+    background: #FFFFFF;
+
+    border: 1px solid var(--exp-border);
+
+    color: var(--exp-blue);
+
+    box-shadow:
+        0 5px 15px rgba(0, 74, 143, 0.06);
+}
+
+.exp-btn-secondary:hover {
+    background: var(--exp-light-blue);
+
+    border-color: var(--exp-blue);
+
+    box-shadow:
+        0 8px 20px rgba(0, 74, 143, 0.10);
+}
+
+/* =========================================================
+   КОНТРОЛЫ СЛАЙДЕРА
+========================================================= */
+
+.exp-slider-controls {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid var(--exp-border);
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   ТОЧКИ
+========================================================= */
+
+.exp-dots-container {
+    min-height: 32px;
+
+    padding: 6px 11px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    background: #17324D;
+
+    border-radius: 999px;
+
+    box-sizing: border-box;
+}
+
+.exp-dot {
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #7990A4;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        width 0.2s ease;
+}
+
+.exp-dot:hover {
+    background: #BFD3E3;
+}
+
+.exp-dot.active {
+    width: 18px;
+
+    border-radius: 999px;
+
+    background: #FFFFFF;
+}
+
+/* =========================================================
+   СТРЕЛКИ
+========================================================= */
+
+.exp-arrow-btn {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #FFFFFF;
+
+    border: 1px solid var(--exp-border);
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.exp-arrow-btn:hover:not(.disabled) {
+    background: var(--exp-light-blue);
+
+    border-color: var(--exp-blue);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(0, 74, 143, 0.10);
+}
+
+.exp-arrow-btn::before {
+    content: '';
+
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    top: 50%;
+    left: 50%;
+
+    border-top: 3px solid var(--exp-blue);
+    border-right: 3px solid var(--exp-blue);
+}
+
+.exp-arrow-btn:first-child::before {
+    transform: translate(-25%, -50%) rotate(-135deg);
+}
+
+.exp-arrow-btn:last-child::before {
+    transform: translate(-75%, -50%) rotate(45deg);
+}
+
+.exp-arrow-btn.disabled {
+    opacity: 0.3;
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.exp-btn:focus-visible,
+.exp-arrow-btn:focus-visible,
+.exp-dot:focus-visible {
+    outline: 2px solid #2AB6FC;
+    outline-offset: 3px;
+}
+
+/* =========================================================
+   ПЛАНШЕТ
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .experience-section {
+        padding: 60px 24px 70px;
+    }
+
+    .exp-header {
+        margin-bottom: 36px;
+    }
+
+    .exp-main-title {
+        height: 58px;
+
+        padding: 0 24px;
+
+        font-size: 36px;
+    }
+
+    .exp-subtitle-badge {
+        height: 58px;
+
+        padding: 0 18px;
+
+        font-size: 17px;
+    }
+
+    .exp-content-wrapper {
+        grid-template-columns: minmax(0, 430px) minmax(0, 1fr);
+
+        gap: 30px;
+    }
+
+    .exp-slider-container {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .exp-sensor-card {
+        max-width: 430px;
+    }
+}
+
+/* =========================================================
+   НЕБОЛЬШОЙ ПЛАНШЕТ
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .exp-content-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .exp-slider-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .exp-actions-sidebar {
+        max-width: 430px;
+    }
+
+    .exp-buttons-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+}
+
+/* =========================================================
+   МОБИЛЬНЫЕ
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .experience-section {
+        padding: 45px 16px 55px;
+    }
+
+    /* Заголовок */
+
+    .exp-header {
+        width: 100%;
+
+        margin-bottom: 28px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        border-radius: 14px;
+    }
+
+    .exp-main-title {
+        width: 100%;
+        height: 48px;
+
+        padding: 0 16px;
+
+        font-size: 26px;
+
+        white-space: normal;
+    }
+
+    .exp-subtitle-badge {
+        width: 100%;
+        height: 34px;
+
+        padding: 0 16px;
+
+        justify-content: flex-start;
+
+        border-left: none;
+        border-top: 1px solid var(--exp-border);
+
+        font-size: 13px;
+    }
+
+    /* Контент */
+
+    .exp-content-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        gap: 24px;
+
+        align-items: center;
+    }
+
+    /* Карточки */
+
+    .exp-slider-container {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        justify-items: center;
+    }
+
+    .exp-sensor-card {
+        width: 100%;
+        max-width: 430px;
+
+        border-radius: 17px;
+    }
+
+    /* Sidebar */
+
+    .exp-actions-sidebar {
+        width: 100%;
+        max-width: 430px;
+
+        gap: 20px;
+    }
+
+    /* Контролы */
+
+    .exp-slider-controls {
+        justify-content: center;
+
+        gap: 16px;
+
+        padding-top: 12px;
+    }
+
+    /* Кнопки */
+
+    .exp-buttons-group {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .exp-btn {
+        width: 100%;
+        max-width: 290px;
+
+        min-height: 50px;
+
+        border-radius: 10px;
+
+        font-size: 15px;
+    }
+
+    .exp-arrow-btn {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 11px;
+    }
+}
+
+/* =========================================================
+   МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .experience-section {
+        padding: 38px 12px 48px;
+    }
+
+    .exp-header {
+        margin-bottom: 24px;
+    }
+
+    .exp-main-title {
+        height: 44px;
+
+        padding: 0 14px;
+
+        font-size: 22px;
+    }
+
+    .exp-subtitle-badge {
+        height: 30px;
+
+        padding: 0 14px;
+
+        font-size: 12px;
+    }
+
+    .exp-sensor-card {
+        border-radius: 15px;
+    }
+
+    .exp-btn {
+        max-width: 250px;
+
+        min-height: 47px;
+
+        padding: 0 14px;
+
+        font-size: 14px;
+    }
+
+    .exp-dots-container {
+        min-height: 30px;
+
+        padding: 5px 10px;
+    }
+
+    .exp-arrow-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .exp-arrow-btn::before {
+        width: 9px;
+        height: 9px;
+
+        border-width: 2px;
+    }
+}
+
+/* =========================================================
+   ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .experience-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .exp-main-title {
+        font-size: 20px;
+    }
+
+    .exp-subtitle-badge {
+        font-size: 11px;
+    }
+
+    .exp-btn {
+        max-width: 230px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .exp-sensor-card,
+    .exp-btn,
+    .exp-arrow-btn,
+    .exp-dot {
+        transition: none;
+    }
+}

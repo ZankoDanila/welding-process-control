@@ -1,0 +1,436 @@
+.registrar-card {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D6E7F5;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0, 74, 143, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+    box-sizing: border-box;
+}
+
+.registrar-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #BFD8EC;
+
+    box-shadow:
+        0 14px 30px rgba(0, 74, 143, 0.13);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.registrar-card__image-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 270px;
+
+    overflow: hidden;
+
+    background: #EAF3FB;
+}
+
+.registrar-card__image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.registrar-card:hover .registrar-card__image {
+    transform: scale(1.025);
+}
+
+.registrar-card__id {
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    padding: 6px 10px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 999px;
+
+    color: #0055A4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.registrar-card__content {
+    padding: 22px 22px 20px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.registrar-card__heading {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 8px;
+}
+
+.registrar-card__heading h2 {
+    margin: 0;
+
+    color: #004A8F;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.registrar-card__heading span {
+    width: 3px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    background: #FEEF9E;
+
+    border-radius: 999px;
+}
+
+/* =========================================================
+   COMPANY
+========================================================= */
+
+.registrar-card__company {
+    margin: 0 0 20px;
+
+    color: #6A88A3;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+/* =========================================================
+   PARAMETERS
+========================================================= */
+
+.registrar-card__parameters {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.registrar-card__parameter {
+    padding: 11px 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    background: #F5F9FD;
+
+    border: 1px solid #E1EDF7;
+    border-radius: 10px;
+}
+
+.registrar-card__parameter span {
+    color: #6A88A3;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.registrar-card__parameter strong {
+    color: #17324D;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.registrar-card__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.registrar-card__button {
+    min-height: 46px;
+
+    padding: 0 14px;
+
+    border-radius: 10px;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.registrar-card__button:hover {
+    transform: translateY(-2px);
+}
+
+.registrar-card__button:active {
+    transform: translateY(0);
+}
+
+.registrar-card__button--secondary {
+    background: #FFFFFF;
+
+    border: 1px solid #D6E7F5;
+
+    color: #0055A4;
+}
+
+.registrar-card__button--secondary:hover {
+    background: #EAF3FB;
+
+    border-color: #0055A4;
+}
+
+.registrar-card__button--primary {
+    background: #0055A4;
+
+    border: 1px solid #0055A4;
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 6px 16px rgba(0, 85, 164, 0.14);
+}
+
+.registrar-card__button--primary:hover {
+    background: #004A8F;
+
+    border-color: #004A8F;
+
+    box-shadow:
+        0 9px 21px rgba(0, 85, 164, 0.21);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .registrar-card__image-wrapper {
+        height: 320px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .registrar-card {
+        border-radius: 16px;
+    }
+
+    .registrar-card__image-wrapper {
+        height: 220px;
+    }
+
+    .registrar-card__content {
+        padding: 18px 16px 17px;
+    }
+
+    .registrar-card__heading h2 {
+        font-size: 22px;
+    }
+
+    .registrar-card__company {
+        font-size: 13px;
+    }
+
+    .registrar-card__actions {
+        grid-template-columns: 1fr;
+    }
+
+    .registrar-card__button {
+        min-height: 44px;
+    }
+}
+
+/* =========================================================
+   ADMIN BADGE
+========================================================= */
+
+.registrar-card__admin-badge {
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    padding: 6px 9px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid #D6E7F5;
+    border-radius: 6px;
+
+    color: #0055A4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   ADMIN ACTIONS
+========================================================= */
+
+.registrar-card__admin-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 9px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid #E1EBF3;
+}
+
+
+.registrar-card__admin-button {
+    min-height: 40px;
+
+    padding: 0 10px;
+
+    border-radius: 8px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.registrar-card__admin-button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EDIT
+========================================================= */
+
+.registrar-card__admin-button--edit {
+    background: #EAF3FB;
+
+    border: 1px solid #C9DCEB;
+
+    color: #0055A4;
+}
+
+
+.registrar-card__admin-button--edit:hover {
+    background: #DCECF8;
+
+    border-color: #0055A4;
+}
+
+
+/* =========================================================
+   DELETE
+========================================================= */
+
+.registrar-card__admin-button--delete {
+    background: #FFFFFF;
+
+    border: 1px solid #E3CACA;
+
+    color: #9B3030;
+}
+
+
+.registrar-card__admin-button--delete:hover {
+    background: #FFF3F3;
+
+    border-color: #B65A5A;
+}
+
+.registrar-card__summary {
+    margin-bottom: 20px;
+}
+
+.registrar-card__summary p {
+    margin: 0;
+
+    color: #526B82;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}

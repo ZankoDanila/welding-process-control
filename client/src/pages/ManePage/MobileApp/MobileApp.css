@@ -1,0 +1,392 @@
+/* =========================================================
+   MOBILE APPLICATION
+   ВНУТРЕННИЙ БЛОК SOFTWARE SECTION
+========================================================= */
+
+.mobile-app-section {
+    --mobile-blue: #0055A4;
+    --mobile-dark-blue: #004A8F;
+    --mobile-light-blue: #EAF3FB;
+    --mobile-border: #D6E0E8;
+    --mobile-text: #17324D;
+    --mobile-muted: #66798A;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   КОНТЕЙНЕР
+========================================================= */
+
+.mobile-app-container {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 0 24px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.mobile-app-header {
+    width: 100%;
+
+    margin: 0 0 30px;
+    padding: 0 0 20px;
+
+    border-bottom: 1px solid var(--mobile-border);
+
+    box-sizing: border-box;
+}
+
+
+.mobile-app-label {
+    display: inline-flex;
+
+    margin-bottom: 10px;
+    padding: 5px 10px;
+
+    background: var(--mobile-light-blue);
+    color: var(--mobile-dark-blue);
+
+    border: 1px solid #C9DCEB;
+    border-radius: 5px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    box-sizing: border-box;
+}
+
+
+.mobile-app-title {
+    margin: 0;
+
+    color: var(--mobile-dark-blue);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+}
+
+
+.mobile-app-description {
+    max-width: 520px;
+
+    margin: 12px 0 0;
+
+    color: var(--mobile-text);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SCREENS HEADER
+========================================================= */
+
+.mobile-app-screens-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+.mobile-app-screens-header h3 {
+    margin: 0;
+
+    color: var(--mobile-dark-blue);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+.mobile-app-screens-header span {
+    color: var(--mobile-muted);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   PHONES
+========================================================= */
+
+.mobile-app-phones {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 10px;
+
+    box-sizing: border-box;
+}
+
+
+.mobile-app-phone-item {
+    width: 170px;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.mobile-app-phone-image-wrapper {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    box-sizing: border-box;
+}
+
+
+.mobile-app-phone {
+    display: block;
+
+    width: 170px;
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 8px 14px rgba(0, 0, 0, 0.13));
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+/* =========================================================
+   ПОДПИСИ ПОД ЭКРАНАМИ
+========================================================= */
+
+.mobile-app-phone-title {
+    width: 100%;
+
+    margin-top: 13px;
+
+    color: var(--mobile-dark-blue);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    text-align: center;
+}
+
+
+.mobile-app-phone-description {
+    width: 100%;
+
+    margin-top: 5px;
+
+    color: var(--mobile-muted);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 11.5px;
+
+    line-height: 1.45;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.mobile-app-phone:hover {
+    transform: translateY(-4px);
+
+    filter:
+        drop-shadow(0 12px 18px rgba(0, 0, 0, 0.17));
+}
+
+
+/* =========================================================
+   ПЛАНШЕТ
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .mobile-app-container {
+        padding: 0 18px;
+    }
+
+    .mobile-app-phone-item,
+    .mobile-app-phone {
+        width: 155px;
+    }
+
+    .mobile-app-phones {
+        gap: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   МОБИЛЬНЫЕ
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .mobile-app-container {
+        padding: 0;
+    }
+
+
+    .mobile-app-header {
+        margin-bottom: 26px;
+        padding-bottom: 18px;
+    }
+
+
+    .mobile-app-label {
+        font-size: 10px;
+    }
+
+
+    .mobile-app-title {
+        font-size: 21px;
+    }
+
+
+    .mobile-app-description {
+        font-size: 14px;
+    }
+
+
+    .mobile-app-screens-header {
+        display: block;
+
+        margin-bottom: 18px;
+    }
+
+
+    .mobile-app-screens-header h3 {
+        font-size: 16px;
+    }
+
+
+    .mobile-app-screens-header span {
+        display: block;
+
+        margin-top: 5px;
+
+        font-size: 11.5px;
+
+        text-align: left;
+    }
+
+
+    .mobile-app-phones {
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        padding: 4px 0 18px;
+
+        scrollbar-width: thin;
+        scrollbar-color: #BFD1DF transparent;
+    }
+
+
+    .mobile-app-phone-item,
+    .mobile-app-phone {
+        width: 155px;
+    }
+
+
+    .mobile-app-phones {
+        gap: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .mobile-app-phone-item,
+    .mobile-app-phone {
+        width: 145px;
+    }
+
+
+    .mobile-app-phone-title {
+        font-size: 13px;
+    }
+
+
+    .mobile-app-phone-description {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .mobile-app-phone {
+        transition: none;
+    }
+
+}

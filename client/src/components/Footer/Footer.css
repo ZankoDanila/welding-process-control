@@ -1,0 +1,313 @@
+/* ==========================================================
+   ФУТЕР
+========================================================== */
+
+.main-footer {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   ОСНОВНАЯ ЧАСТЬ
+========================================================== */
+
+.footer-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 55px max(20px, 4%) 50px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 100px;
+
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   БРЕНД
+========================================================== */
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 620px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    text-decoration: none;
+    color: inherit;
+
+    transition: opacity 0.2s ease;
+}
+
+.footer-brand:hover {
+    opacity: 0.85;
+}
+
+.footer-logo-img {
+    width: 42px;
+    height: 58px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    line-height: 1.15;
+}
+
+.brand-university {
+    color: #000000;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.brand-system {
+    color: #0055A4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.footer-description {
+    max-width: 500px;
+    margin: 24px 0 0;
+
+    color: #606060;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   НАВИГАЦИЯ
+========================================================== */
+
+.footer-navigation {
+    min-width: 330px;
+}
+
+.footer-title {
+    margin: 0 0 20px;
+
+    color: #0055A4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.footer-menu {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+
+    column-gap: 55px;
+    row-gap: 14px;
+}
+
+.footer-link {
+    display: inline-block;
+
+    color: #000000;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #0055A4;
+    transform: translateX(3px);
+}
+
+/* ==========================================================
+   НИЖНЯЯ ПАНЕЛЬ
+========================================================== */
+
+.footer-bottom {
+    width: 100%;
+    border-top: 1px solid #d9d9d9;
+}
+
+.footer-bottom-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    padding: 18px max(20px, 4%);
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    box-sizing: border-box;
+}
+
+.footer-copyright {
+    color: #6a6a6a;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+}
+
+.footer-university-link {
+    color: #0055A4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.footer-university-link:hover {
+    opacity: 0.75;
+}
+
+.footer-top-button {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border: none;
+    background: transparent;
+
+    padding: 0;
+
+    color: #0055A4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-top-button:hover {
+    opacity: 0.75;
+    transform: translateY(-2px);
+}
+
+.footer-top-arrow {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* ==========================================================
+   ПЛАНШЕТ
+========================================================== */
+
+@media (max-width: 1024px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+
+        padding-top: 45px;
+        padding-bottom: 40px;
+    }
+
+    .footer-navigation {
+        min-width: 0;
+    }
+}
+
+/* ==========================================================
+   МОБИЛЬНЫЕ
+========================================================== */
+
+@media (max-width: 576px) {
+
+    .footer-container {
+        padding: 35px 20px;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        align-items: flex-start;
+    }
+
+    .footer-logo-img {
+        width: 34px;
+        height: 48px;
+    }
+
+    .brand-university {
+        font-size: 16px;
+    }
+
+    .brand-system {
+        font-size: 15px;
+    }
+
+    .footer-description {
+        margin-top: 18px;
+
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .footer-title {
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+
+    .footer-menu {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 25px;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .footer-bottom-container {
+        flex-wrap: wrap;
+        gap: 10px 20px;
+
+        padding: 16px 20px;
+    }
+
+    .footer-top-button {
+        margin-left: 0;
+        width: 100%;
+    }
+}

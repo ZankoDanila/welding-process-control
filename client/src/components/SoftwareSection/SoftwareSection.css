@@ -1,0 +1,169 @@
+/* =========================================================
+   SOFTWARE SECTION
+========================================================= */
+
+.software-section {
+    width: 100%;
+
+    background: #F3F6F9;
+
+    padding: 88px 0 96px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.software-section-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 0 24px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.software-section-header {
+    margin-bottom: 46px;
+}
+
+.software-section-title {
+    margin: 0;
+
+    color: #004A8F;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(34px, 4vw, 50px);
+    font-weight: 700;
+
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+
+    text-transform: uppercase;
+}
+
+.software-section-description {
+    margin: 10px 0 0;
+
+    color: #66798A;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   TWO COLUMNS
+========================================================= */
+
+.software-section-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   COLUMN
+========================================================= */
+
+.software-section-column {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.software-section-column + .software-section-column {
+    border-left: 1px solid #D5DEE6;
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   MobileApp / WebApp become inner blocks,
+   not independent page sections.
+========================================================= */
+
+.software-section-column .mobile-app-section,
+.software-section-column .web-app-section {
+    width: 100%;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: none;
+}
+
+
+/* Убираем собственные контейнерные ограничения */
+
+.software-section-column .mobile-app-container,
+.software-section-column .web-container,
+.software-section-column .web-app-container {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    padding: 0 28px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+    .software-section {
+        padding: 60px 0 68px;
+    }
+
+    .software-section-container {
+        padding: 0 16px;
+    }
+
+    .software-section-header {
+        margin-bottom: 34px;
+    }
+
+    .software-section-title {
+        font-size: 28px;
+    }
+
+    .software-section-description {
+        font-size: 15px;
+    }
+
+    .software-section-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .software-section-column + .software-section-column {
+        border-left: none;
+
+        border-top: 1px solid #D5DEE6;
+    }
+
+    .software-section-column .mobile-app-container,
+    .software-section-column .web-container,
+    .software-section-column .web-app-container {
+        padding: 0;
+    }
+}

@@ -1,0 +1,631 @@
+/* ==========================================================
+   ОТЗЫВЫ
+========================================================== */
+
+.reviews {
+    --review-blue: #0055A4;
+    --review-dark-blue: #004A8F;
+    --review-light-blue: #EAF3FB;
+    --review-border: #D6E7F5;
+    --review-soft: #F5F9FD;
+
+    width: 100%;
+    padding: 75px 0 85px;
+
+    background: #FFFFFF;
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   ОСНОВНОЙ КОНТЕЙНЕР
+========================================================== */
+
+.reviews__inner {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   СТРЕЛКИ
+========================================================== */
+
+.reviews__arrow {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: #FFFFFF;
+
+    border: 1px solid var(--review-border);
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0, 74, 143, 0.08);
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.reviews__arrow svg {
+    width: 26px;
+    height: 26px;
+
+    display: block;
+
+    stroke: var(--review-blue);
+
+    transition:
+        stroke 0.2s ease,
+        transform 0.2s ease;
+}
+
+.reviews__arrow:hover:not(:disabled) {
+    background: var(--review-light-blue);
+    border-color: var(--review-blue);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 74, 143, 0.14);
+}
+
+.reviews__arrow:hover:not(:disabled) svg {
+    transform: scale(1.05);
+}
+
+.reviews__arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* ==========================================================
+   ОКНО КАРУСЕЛИ
+========================================================== */
+
+.reviews__track-wrapper {
+    width: 100%;
+    max-width: 1260px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+/* ==========================================================
+   ТРЕК
+========================================================== */
+
+.reviews__track {
+    display: flex;
+    align-items: stretch;
+
+    gap: 20px;
+
+    width: max-content;
+
+    transform: translateX(
+        calc(
+            var(--reviews-index, 0) * -420px
+        )
+    );
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+
+    will-change: transform;
+}
+
+/* ==========================================================
+   КАРТОЧКА
+========================================================== */
+
+.review-card {
+    width: 400px;
+    min-height: 330px;
+
+    flex: 0 0 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 26px 26px 22px;
+
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+
+    border: 1px solid var(--review-border);
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 74, 143, 0.08);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.review-card::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 5px;
+
+    background: var(--review-blue);
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #BFD8EC;
+
+    box-shadow:
+        0 14px 30px rgba(0, 74, 143, 0.13);
+}
+
+/* ==========================================================
+   ПРОДУКТ
+========================================================== */
+
+.review-product {
+    margin-bottom: 8px;
+
+    color: var(--review-blue);
+
+    font-family:
+        'Manrope',
+        'Inter',
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    line-height: 1.3;
+
+    letter-spacing: 0.04em;
+
+    text-align: left;
+
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   КОМПАНИЯ
+========================================================== */
+
+.review-company {
+    min-height: 54px;
+
+    margin-bottom: 18px;
+
+    color: #000000;
+
+    font-family:
+        'Manrope',
+        'Inter',
+        Arial,
+        sans-serif;
+
+    font-size: 21px;
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    word-break: break-word;
+}
+
+/* ==========================================================
+   АВТОР
+========================================================== */
+
+.review-author-name {
+    margin-bottom: 4px;
+
+    color: var(--review-dark-blue);
+
+    font-family:
+        'Manrope',
+        'Inter',
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    line-height: 1.4;
+}
+
+.review-author-role {
+    margin-bottom: 18px;
+
+    color: #5A7A98;
+
+    font-family:
+        'Inter',
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+/* ==========================================================
+   ТЕКСТ ОТЗЫВА
+========================================================== */
+
+.review-text {
+    flex-grow: 1;
+
+    margin: 0 0 20px;
+
+    padding-right: 4px;
+
+    color: #17324D;
+
+    font-family:
+        'Inter',
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.55;
+
+    text-align: left;
+
+    overflow-y: auto;
+
+    max-height: 155px;
+
+    scrollbar-width: thin;
+    scrollbar-color: #BFD8EC transparent;
+}
+
+.review-text::-webkit-scrollbar {
+    width: 4px;
+}
+
+.review-text::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.review-text::-webkit-scrollbar-thumb {
+    background: #BFD8EC;
+    border-radius: 10px;
+}
+
+/* ==========================================================
+   НИЖНЯЯ ЧАСТЬ
+========================================================== */
+
+.review-footer {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: auto;
+
+    padding-top: 14px;
+
+    border-top: 1px solid var(--review-border);
+}
+
+/* ==========================================================
+   ЗВЕЗДА
+========================================================== */
+
+.review-star {
+    width: 22px;
+    height: 22px;
+
+    flex-shrink: 0;
+
+    background: var(--review-blue);
+
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+}
+
+/* ==========================================================
+   РЕЙТИНГ
+========================================================== */
+
+.review-rating {
+    color: var(--review-blue);
+
+    font-family:
+        'Manrope',
+        'Inter',
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+/* ==========================================================
+   ДАТА
+========================================================== */
+
+.review-date {
+    margin-left: auto;
+
+    color: #6A88A3;
+
+    font-family:
+        'Inter',
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+/* ==========================================================
+   ПЛАНШЕТ
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .reviews {
+        padding: 60px 0 70px;
+    }
+
+    .reviews__track {
+        transform: translateX(
+            calc(
+                var(--reviews-index, 0) * -380px
+            )
+        );
+    }
+
+    .review-card {
+        width: 360px;
+        flex-basis: 360px;
+
+        min-height: 320px;
+    }
+
+    .review-company {
+        font-size: 20px;
+    }
+}
+
+/* ==========================================================
+   НЕБОЛЬШОЙ ПЛАНШЕТ
+========================================================== */
+
+@media (max-width: 1000px) {
+
+    .reviews__inner {
+        gap: 12px;
+
+        padding: 0 18px;
+    }
+
+    .reviews__arrow {
+        width: 46px;
+        height: 46px;
+
+        border-radius: 12px;
+    }
+
+    .reviews__arrow svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .reviews__track {
+        gap: 16px;
+
+        transform: translateX(
+            calc(
+                var(--reviews-index, 0) * -336px
+            )
+        );
+    }
+
+    .review-card {
+        width: 320px;
+        flex-basis: 320px;
+
+        min-height: 310px;
+
+        padding: 22px 20px 18px;
+    }
+}
+
+/* ==========================================================
+   МОБИЛЬНЫЙ
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .reviews {
+        padding: 45px 0 55px;
+    }
+
+    .reviews__inner {
+        display: block;
+
+        padding: 0 16px;
+    }
+
+    .reviews__arrow {
+        display: none;
+    }
+
+    .reviews__track-wrapper {
+        width: 100%;
+        max-width: none;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        -webkit-overflow-scrolling: touch;
+
+        scroll-snap-type: x mandatory;
+    }
+
+    .reviews__track-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .reviews__track {
+        gap: 14px;
+
+        width: max-content;
+
+        padding: 5px 2px 14px;
+
+        transform: none !important;
+        transition: none;
+    }
+
+    .review-card {
+        width: min(320px, calc(100vw - 40px));
+        flex-basis: min(320px, calc(100vw - 40px));
+
+        min-height: 300px;
+
+        padding: 21px 19px 18px;
+
+        border-radius: 17px;
+
+        scroll-snap-align: start;
+    }
+
+    .review-product {
+        font-size: 13px;
+    }
+
+    .review-company {
+        min-height: auto;
+
+        margin-bottom: 16px;
+
+        font-size: 19px;
+    }
+
+    .review-author-name {
+        font-size: 14px;
+    }
+
+    .review-author-role {
+        font-size: 12px;
+    }
+
+    .review-text {
+        font-size: 14px;
+
+        line-height: 1.5;
+
+        max-height: 145px;
+    }
+
+    .review-rating {
+        font-size: 17px;
+    }
+
+    .review-date {
+        font-size: 12px;
+    }
+}
+
+/* ==========================================================
+   УЗКИЙ МОБИЛЬНЫЙ
+========================================================== */
+
+@media (max-width: 576px) {
+
+    .reviews {
+        padding: 38px 0 48px;
+    }
+
+    .reviews__inner {
+        padding: 0 12px;
+    }
+
+    .review-card {
+        width: calc(100vw - 30px);
+        flex-basis: calc(100vw - 30px);
+
+        min-height: 285px;
+
+        padding: 19px 17px 17px;
+    }
+
+    .review-company {
+        font-size: 18px;
+    }
+
+    .review-text {
+        font-size: 13px;
+
+        max-height: 135px;
+    }
+
+    .review-star {
+        width: 20px;
+        height: 20px;
+    }
+}
